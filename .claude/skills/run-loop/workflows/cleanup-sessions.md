@@ -6,7 +6,7 @@
 
 Run the stale check script:
 ```bash
-bash .claude/skills/tmux-loop/scripts/warn-stale.sh
+bash .claude/skills/run-loop/scripts/warn-stale.sh
 ```
 
 Or manually check sessions running > 2 hours:

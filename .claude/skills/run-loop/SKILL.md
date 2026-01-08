@@ -31,14 +31,25 @@ Every tmux session you start MUST be tracked. When you start a session, update t
 </essential_principles>
 
 <intake>
-What would you like to do?
+Use the AskUserQuestion tool with these options:
 
-1. **Start** a new loop session
-2. **Monitor** a running session (peek at output)
-3. **Attach** to watch live
-4. **List** all running sessions
-5. **Kill** a session
-6. **Cleanup** stale sessions
+```json
+{
+  "questions": [{
+    "question": "What would you like to do with tmux loop sessions?",
+    "header": "Loop Action",
+    "options": [
+      {"label": "Start", "description": "Spin up a new loop session in tmux"},
+      {"label": "Monitor", "description": "Peek at output from a running session"},
+      {"label": "Attach", "description": "Connect to watch a session live"},
+      {"label": "List", "description": "Show all running loop sessions"},
+      {"label": "Kill", "description": "Terminate a running session"},
+      {"label": "Cleanup", "description": "Find and handle stale sessions"}
+    ],
+    "multiSelect": false
+  }]
+}
+```
 
 **Wait for response before proceeding.**
 </intake>
@@ -46,12 +57,12 @@ What would you like to do?
 <routing>
 | Response | Workflow |
 |----------|----------|
-| 1, "start", "new", "spin up", "run" | `workflows/start-session.md` |
-| 2, "monitor", "check", "peek", "status" | `workflows/monitor-session.md` |
-| 3, "attach", "watch", "connect" | `workflows/attach-session.md` |
-| 4, "list", "show", "running" | `workflows/list-sessions.md` |
-| 5, "kill", "stop", "terminate" | `workflows/kill-session.md` |
-| 6, "cleanup", "stale", "orphan" | `workflows/cleanup-sessions.md` |
+| "Start" | `workflows/start-session.md` |
+| "Monitor" | `workflows/monitor-session.md` |
+| "Attach" | `workflows/attach-session.md` |
+| "List" | `workflows/list-sessions.md` |
+| "Kill" | `workflows/kill-session.md` |
+| "Cleanup" | `workflows/cleanup-sessions.md` |
 
 **After reading the workflow, follow it exactly.**
 </routing>

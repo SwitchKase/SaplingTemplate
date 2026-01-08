@@ -157,7 +157,7 @@ You are an autonomous agent executing tasks from prd.json.
 
 ### /loop status
 ```bash
-bash .claude/skills/tmux-loop/scripts/check-sessions.sh
+bash .claude/skills/run-loop/scripts/check-sessions.sh
 ```
 
 ### /loop attach NAME

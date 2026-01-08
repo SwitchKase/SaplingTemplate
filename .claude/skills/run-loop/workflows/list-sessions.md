@@ -24,7 +24,7 @@ For each session, report:
 ## Step 4: Run Check Script
 
 ```bash
-bash .claude/skills/tmux-loop/scripts/check-sessions.sh
+bash .claude/skills/run-loop/scripts/check-sessions.sh
 ```
 
 ## Step 5: Display Summary
