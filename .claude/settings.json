@@ -1,5 +1,20 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "plugins": {
+    "marketplaces": [
+      {
+        "name": "every-marketplace",
+        "source": "https://github.com/EveryInc/compound-engineering-plugin"
+      }
+    ],
+    "installed": [
+      {
+        "name": "compound-engineering",
+        "marketplace": "every-marketplace",
+        "scope": "project"
+      }
+    ]
+  },
   "hooks": {
     "SessionStart": [
       {
